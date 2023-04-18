@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Sorteio</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/sort.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-title">
+            Meu sorteio
+        </div>
+        <form>
+            <label for="numberIni">Nº Inicial:</label>
+            <input type="number" min="0" placeholder="Digite o nº inicial" id="numberIni" value="0">
+            <label for="numberFin">Nº Final:</label>
+            <input type="number" min="0" placeholder="Digite o nº final" id="numberFin" value="100">
+            <input type="submit" value="Sortear agora!">
+        </form>
+    
+        <div class="result"></div>
+        <div class="loader-area">
+            <div class="loader-title">Sorteando...</div>
+            <div class="loader"></div>
+        </div>
+        <div class="reloader">
+            Novo sorteio
+        </div>
+    </div>
+</body>
+</html>
