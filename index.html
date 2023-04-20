@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Sorteio</title>
+    <title>Meu Sorteador</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/js/sort.js" defer></script>
 </head>
 <body>
+    <header>
+        <div class="header-left">
+            <div class="header-logo">
+                <img src="assets/img/trevo.png" alt="Meu Sorteador">
+            </div>
+        </div>
+        <div class="header-right">
+            <label for="dark">Dark</label>
+            <input type="checkbox" id="dark">
+        </div>
+    </header>
     <div class="container">
         <div class="container-title">
-            Meu sorteio
+            Meu Sorteador
         </div>
         <form>
             <label for="numberIni">Nº Inicial:</label>
-            <input type="number" min="0" placeholder="Digite o nº inicial" id="numberIni" value="0">
+            <input type="number" min="0" placeholder="Digite o nº inicial" id="numberIni" value="1">
             <label for="numberFin">Nº Final:</label>
             <input type="number" min="0" placeholder="Digite o nº final" id="numberFin" value="100">
             <input type="submit" value="Sortear agora!">
@@ -29,8 +40,14 @@
             <div class="loader"></div>
         </div>
         <div class="reloader">
-            Novo sorteio
+            Novo Sorteio
         </div>
     </div>
+    <footer>
+        <span>
+            &copy; 2023 - By
+            <a href="https://github.com/daniloferreirasousa" target="_blank">DFS</a>
+        </span>
+    </footer>
 </body>
 </html>

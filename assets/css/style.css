@@ -1,9 +1,7 @@
-@charset "UTF-8";
 /*
-* Definição das Cores
-*/
-/*
-* Definição das Medidas
+* ### Meu Sorteador ###
+* @version: 1.0
+* @author: Danilo Ferreira Sousa
 */
 * {
   padding: 0;
@@ -26,19 +24,49 @@
   50% {
     font-size: 4.5rem;
   }
-  100% {
-    fon-size: 3.5rem;
-  }
 }
 body {
   background: linear-gradient(90deg, #f1f1f1, #ffffff);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+header {
+  width: 100vw;
+  max-width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px #898989;
+  display: flex;
+  flex-direction: row;
+}
+header .header-left, header .header-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0px 20px;
+  color: #898989;
+}
+header .header-left {
+  justify-content: flex-start;
+}
+header .header-left .header-logo {
+  width: 52px;
+  height: 52px;
+}
+header .header-left .header-logo img {
+  width: inherit;
+  height: inherit;
+}
+header .header-right {
+  justify-content: flex-end;
+}
+
 .container {
-  width: 90vw;
+  width: 100%;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -58,14 +86,13 @@ body {
 }
 
 .container form {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
   padding: 50px;
-  box-shadow: 1px 2px 5px #898989;
   opacity: 1;
   font-size: 1.375rem;
 }
@@ -94,8 +121,8 @@ body {
   font-weight: bold;
 }
 .container form input[type=submit]:hover {
-  border-color: #f64348;
-  background-color: #f64348;
+  border-color: #76cc5b;
+  background-color: #76cc5b;
 }
 
 .result {
@@ -108,7 +135,7 @@ body {
   padding: 50px;
   font-size: 5.5rem;
   font-weight: bold;
-  color: #f64348;
+  color: #76cc5b;
   opacity: 0;
   border: 5px solid #898989;
   border-radius: 50%;
@@ -119,7 +146,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   display: none;
   opacity: 0;
 }
@@ -154,5 +181,43 @@ body {
 }
 
 .reloader:hover {
-  background-color: #f64348;
+  background-color: #76cc5b;
+}
+
+footer {
+  width: 100vw;
+  max-width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer span {
+  color: #898989;
+  font-size: 0.875rem;
+}
+footer span a {
+  text-decoration: none;
+  color: #898989;
+  font-weight: bold;
+}
+
+.dark {
+  background-color: #404040 !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.dark-l {
+  background: linear-gradient(45deg, #343434, #404040) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+@media (max-width: 840px) {
+  .container form {
+    width: 90vw;
+  }
+  .container-title {
+    font-size: 2.5rem;
+  }
 }
