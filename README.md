@@ -1,4 +1,4 @@
-# Meu Sorteio
+# My Generator
 
 ### Info
 > - Version: 1.0
